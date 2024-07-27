@@ -1,0 +1,250 @@
+[gd_scene load_steps=3 format=3 uid="uid://by8ud4000kl57"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_yk0p1"]
+
+[sub_resource type="Theme" id="Theme_f1srn"]
+ButtonNotPressed/base_type = &"Label"
+ButtonNotPressed/colors/font_color = Color(0.497474, 0.497474, 0.497474, 1)
+ButtonPressed/base_type = &"Label"
+ButtonPressed/colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_yk0p1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 810.0
+offset_bottom = 566.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="GamepadList" type="ItemList" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RefreshButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Refresh"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Gamepad"
+
+[node name="GuidLabel" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "GUID: ----"
+
+[node name="InfoTextEdit" type="TextEdit" parent="HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+editable = false
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_f1srn")
+columns = 3
+
+[node name="LabelButton0" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "A"
+
+[node name="LabelButton1" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "B"
+
+[node name="LabelButton2" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "X"
+
+[node name="LabelButton3" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "Y"
+
+[node name="LabelButton4" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "BACK"
+
+[node name="LabelButton5" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "GUIDE"
+
+[node name="LabelButton6" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "START"
+
+[node name="LabelButton7" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "LEFT_STICK"
+
+[node name="LabelButton8" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "RIGHT_STICK"
+
+[node name="LabelButton9" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "LEFT_SHOULDER"
+
+[node name="LabelButton10" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "RIGHT_SHOULDER"
+
+[node name="LabelButton11" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "DPAD_UP"
+
+[node name="LabelButton12" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "DPAD_DOWN"
+
+[node name="LabelButton13" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "DPAD_LEFT"
+
+[node name="LabelButton14" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "DPAD_RIGHT"
+
+[node name="LabelButton15" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "MISC1"
+
+[node name="LabelButton16" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "PADDLE1"
+
+[node name="LabelButton17" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "PADDLE2"
+
+[node name="LabelButton18" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "PADDLE3"
+
+[node name="LabelButton19" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "PADDLE4"
+
+[node name="LabelButton20" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonNotPressed"
+text = "TOUCHPAD"
+
+[node name="GridContainer2" type="GridContainer" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+columns = 3
+
+[node name="LabelAxis0" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "LEFT_X"
+
+[node name="ProgressBarAxis0" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue0" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[node name="LabelAxis1" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "LEFT_Y"
+
+[node name="ProgressBarAxis1" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue1" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[node name="LabelAxis2" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "RIGHT_X"
+
+[node name="ProgressBarAxis2" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue2" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[node name="LabelAxis3" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "RIGHT_Y"
+
+[node name="ProgressBarAxis3" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue3" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[node name="LabelAxis4" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "TRIGGER_LEFT"
+
+[node name="ProgressBarAxis4" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue4" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[node name="LabelAxis5" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "TRIGGER_RIGHT"
+
+[node name="ProgressBarAxis5" type="ProgressBar" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="LabelAxisValue5" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "0.00"
+
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/GamepadList" to="." method="_on_gamepad_list_item_selected"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/RefreshButton" to="." method="_on_refresh_button_pressed"]
