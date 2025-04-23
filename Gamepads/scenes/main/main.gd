@@ -37,9 +37,9 @@ func select_gamepad(id: int) -> void:
 func update_gamepad_info(id: int) -> void:
     var gamepad_name := Input.get_joy_name(id)
 
-    $HBoxContainer/VBoxContainer2/NameLabel.text = gamepad_name if gamepad_name != "" else "unknown"
-    $HBoxContainer/VBoxContainer2/GuidLabel.text = "GUID: %s" % Input.get_joy_guid(id)
-    $HBoxContainer/VBoxContainer2/InfoTextEdit.clear()
+    ($HBoxContainer/VBoxContainer2/NameLabel as Label).text = gamepad_name if gamepad_name != "" else "unknown"
+    ($HBoxContainer/VBoxContainer2/GuidLabel as Label).text = "GUID: %s" % Input.get_joy_guid(id)
+    ($HBoxContainer/VBoxContainer2/InfoTextEdit as TextEdit).clear()
 
     var joy_info := Input.get_joy_info(id)
     var info_text := ""
@@ -47,7 +47,7 @@ func update_gamepad_info(id: int) -> void:
     for key: String in joy_info:
         info_text += "%s: %s\n" % [key, joy_info[key]]
 
-    $HBoxContainer/VBoxContainer2/InfoTextEdit.text = info_text
+    ($HBoxContainer/VBoxContainer2/InfoTextEdit as TextEdit).text = info_text
 
 
 func update_buttons_and_axis_readings(id: int) -> void:
