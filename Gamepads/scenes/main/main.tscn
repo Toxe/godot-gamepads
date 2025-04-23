@@ -35,6 +35,12 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Gamepad"
 
+[node name="IsKnownLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Is known? [color=red]no[/color]"
+fit_content = true
+
 [node name="InfoTextEdit" type="TextEdit" parent="HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
